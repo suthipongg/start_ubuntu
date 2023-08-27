@@ -40,7 +40,7 @@ cd $HOME/.fonts
 fc-cache -f -v
 cd
 echo "-------------------------install font in vscode---------------------------"
-cp $curr_dir/$dir_setup/config/config_vscode .config/Code/User/settings.json
+cp $curr_dir/$dir_setup/config/config_vscode $HOME/.config/Code/User/settings.json
 
 # set time to RTC
 # ref : https://ubuntuhandbook.org/index.php/2016/05/time-differences-ubuntu-1604-windows-10/
