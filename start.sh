@@ -1,4 +1,6 @@
 #!/bin/sh
+curr_dir=$(pwd)
+dir_setup=$(dirname "$0")
 cd $HOME
 
 # install google chrome
@@ -33,19 +35,12 @@ apt-get install ttf-ubuntu-font-family -y
 # ref1 : https://stackoverflow.com/questions/62710890/font-issues-while-integrating-zsh-on-visual-studio-code
 # ref2 : https://www.unixtutorial.org/how-to-install-ttf-fonts-in-linux/
 echo "-------------------------install font---------------------------"
-mkdir .fonts
-git clone https://github.com/abertsch/Menlo-for-Powerline.git
-mv Menlo-for-Powerline/* .fonts
-rm -rf Menlo-for-Powerline
-rm -rf .fonts/README.md
-cd .fonts
+cp $curr_dir/$dir_setup/font $HOME/.fonts
+cd $HOME/.fonts
 fc-cache -f -v
 cd
 echo "-------------------------install font in vscode---------------------------"
-touch .config/Code/User/settings.json
-echo "{" >> .config/Code/User/settings.json
-echo '"terminal.integrated.fontFamily": "Menlo for Powerline"' >> .config/Code/User/settings.json
-echo "}" >> .config/Code/User/settings.json
+cp $curr_dir/$dir_setup/config/config_vscode .config/Code/User/settings.json
 
 # set time to RTC
 # ref : https://ubuntuhandbook.org/index.php/2016/05/time-differences-ubuntu-1604-windows-10/
@@ -61,6 +56,7 @@ apt install terminator -y
 # replace default terminal to terminator
 # ref : https://github.com/Eugeny/tabby/issues/5277
 update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/terminator 50
+cp $curr_dir/$dir_setup/config/config_terminator $HOME/.config/terminator/config
 
 # install Ohmy zsh
 # ref : https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
