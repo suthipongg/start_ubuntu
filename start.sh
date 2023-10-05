@@ -35,12 +35,13 @@ apt-get install ttf-ubuntu-font-family -y
 # ref1 : https://stackoverflow.com/questions/62710890/font-issues-while-integrating-zsh-on-visual-studio-code
 # ref2 : https://www.unixtutorial.org/how-to-install-ttf-fonts-in-linux/
 echo "-------------------------install font---------------------------"
-cp $curr_dir/$dir_setup/font $HOME/.fonts
+cp -r $curr_dir/$dir_setup/font $HOME/.fonts
 cd $HOME/.fonts
 fc-cache -f -v
 cd
 echo "-------------------------install font in vscode---------------------------"
-cp $curr_dir/$dir_setup/config/config_vscode.json $HOME/.config/Code/User/settings.json
+mkdir -p $HOME/.config/Code/User
+cp -r $curr_dir/$dir_setup/config/config_vscode.json $HOME/.config/Code/User/settings.json
 
 # set time to RTC
 # ref : https://ubuntuhandbook.org/index.php/2016/05/time-differences-ubuntu-1604-windows-10/
@@ -56,6 +57,7 @@ apt install terminator -y
 # replace default terminal to terminator
 # ref : https://github.com/Eugeny/tabby/issues/5277
 update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/terminator 50
+mkdir -p $HOME/.config/terminator/
 cp $curr_dir/$dir_setup/config/config_terminator.cfg $HOME/.config/terminator/config
 
 # install Ohmy zsh
