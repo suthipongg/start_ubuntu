@@ -1,4 +1,4 @@
-alias ez='vim \$HOME/.zshrc'
-alias sz='source \$HOME/.zshrc'
+alias ez='vim $HOME/.zshrc'
+alias sz='source $HOME/.zshrc'
 alias gst='git status'
 alias python='python3'
