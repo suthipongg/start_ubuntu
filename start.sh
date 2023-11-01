@@ -1,6 +1,7 @@
 #!/bin/sh
 curr_dir=$(pwd)
 dir_setup=$(dirname "$0")
+HOME=/home/$SUDO_USER
 cd $HOME
 
 # install google chrome
