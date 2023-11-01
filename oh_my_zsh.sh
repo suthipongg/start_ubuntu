@@ -8,8 +8,8 @@ echo "-------------------------install extension oh my zsh----------------------
 apt install powerline fonts-powerline -y
 echo "-------------------------setup oh my zsh---------------------------"
 chsh -s $(which zsh)
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 mv .zshrc .zshrc_backup
 cp $curr_dir/$dir_setup/config/config_oh_my_zsh.sh $HOME/.zshrc
 
