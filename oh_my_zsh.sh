@@ -16,4 +16,4 @@ cp $curr_dir/$dir_setup/config/config_oh_my_zsh.sh $HOME/.zshrc
 echo "-------------------------setup zsh---------------------------"
 echo "$(< $curr_dir/$dir_setup/config/config_zsh.sh)" >> $HOME/.zshrc
 
-source .zshrc 
+source $HOME/.zshrc 
