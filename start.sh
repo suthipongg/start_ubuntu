@@ -65,7 +65,7 @@ cp $curr_dir/$dir_setup/config/config_terminator.cfg $HOME/.config/terminator/co
 # ref : https://www.tecmint.com/install-oh-my-zsh-in-ubuntu/
 echo "-------------------------install oh my zsh---------------------------"
 apt-get install zsh -y
-usermod -s /usr/bin/zsh $(whoami)
+usermod -s /usr/bin/zsh $SUDO_USER
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" -y
 
 echo "-------------------------update & upgrade---------------------------"
