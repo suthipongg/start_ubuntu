@@ -7,6 +7,7 @@ cd $HOME
 # setup zsh
 # powerlevel10k link: https://github.com/romkatv/powerlevel10k
 # ref: https://dev.to/equiman/zsh-on-windows-with-wsl-1jck
+# custom left side ref: https://dev.to/phantolajang/how-to-appear-your-custom-hostname-in-iterm-p10k-oh-my-zsh-51ph
 echo "-------------------------install extension oh my zsh---------------------------"
 apt install powerline fonts-powerline -y
 echo "-------------------------setup oh my zsh---------------------------"
