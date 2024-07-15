@@ -5,6 +5,8 @@ HOME=/home/$SUDO_USER
 cd $HOME
 
 # setup zsh
+# powerlevel10k link: https://github.com/romkatv/powerlevel10k
+# ref: https://dev.to/equiman/zsh-on-windows-with-wsl-1jck
 echo "-------------------------install extension oh my zsh---------------------------"
 apt install powerline fonts-powerline -y
 echo "-------------------------setup oh my zsh---------------------------"
